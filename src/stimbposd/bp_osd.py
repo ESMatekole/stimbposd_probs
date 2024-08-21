@@ -59,6 +59,9 @@ class BPOSD:
             input_vector_type="syndrome",
             **bposd_kwargs,
         )
+    def update_channel_probs(self,channel_probs:np.ndarray):
+    
+        return self._bposd.update_channel_probs(channel_probs) 
 
     def decode(self, syndrome: np.ndarray) -> np.ndarray:
         """
